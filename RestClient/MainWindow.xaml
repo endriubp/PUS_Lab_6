@@ -1,0 +1,42 @@
+﻿<Window x:Class="RestClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestClient"
+        mc:Ignorable="d"
+        Title="RestClient" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="list" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" />
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <Label>Imie</Label>
+            <TextBox x:Name="tbname"/>
+            <Label>Miasto</Label>
+            <TextBox x:Name="tbcity"/>
+            <Label>Rok urodzenia</Label>
+            <TextBox x:Name="tbyear"/>
+
+            <Button x:Name="btnadd" Click="btnadd_Click" Height="30" FontSize="20">Dodaj</Button>
+            <Button x:Name="btnedit" Click="btnedit_Click" Height="30" FontSize="20">Edytuj</Button>
+            <Button x:Name="btndelete" Click="btndelete_Click" Height="30" FontSize="20">Usuń</Button>
+            <Button x:Name="btnget" Height="30" FontSize="20" Click="btnget_Click">Wyświetl wszystko</Button>
+            <Label>ID</Label>
+            <TextBox x:Name="tbid"></TextBox>
+            <Button x:Name="btngetone" Height="30" FontSize="20" Click="btngetone_Click">Wyświetl jeden</Button>
+            <Button x:Name="btnsearch" Click="btnsearch_Click" Height="30" FontSize="20">Wyszukaj</Button>
+            <RadioButton x:Name="rbname" Height="20">Po imieniu</RadioButton>
+            <RadioButton x:Name="rbcity" Height="20">Po mieście</RadioButton>
+            <RadioButton x:Name="rbyear" Height="20">Po roku urodzenia</RadioButton>
+        </StackPanel>
+    </Grid>
+</Window>
